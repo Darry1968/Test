@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Fashion Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="page1" class="page">
+            <h2>Introduction to AI in Fashion Recommendations</h2>
+            <div class="box">
+                <img src="/images/ai-fashion-intro.jpg" alt="AI Fashion Introduction">
+                <p>Artificial Intelligence is revolutionizing the fashion industry by enabling personalized shopping
+                    experiences. AI-powered fashion recommendation systems analyze user preferences, body type, and
+                    fashion trends to suggest tailored outfits, creating a seamless online shopping journey. This
+                    approach not only enhances user satisfaction but also boosts sales conversions for retailers.</p>
+            </div>
+        </div>
+
+        <div id="page2" class="page">
+            <h2>How AI Enhances Fashion Personalization</h2>
+            <div class="box">
+                <img src="/images/ai-fashion-personalization.jpg" alt="AI Personalization">
+                <p>AI algorithms leverage user data to offer hyper-personalized clothing recommendations. By analyzing
+                    previous purchases, browsing patterns, and even social media activity, AI systems can predict and
+                    suggest styles that resonate with individual shoppers. This level of personalization is transforming
+                    online fashion retail into a more interactive and engaging experience.</p>
+            </div>
+        </div>
+
+        <div id="page3" class="page">
+            <h2>Image Recognition and Trend Analysis</h2>
+            <div class="box">
+                <img src="/images/ai-fashion-trends.jpg" alt="AI Trend Analysis">
+                <p>AI uses advanced image recognition to identify patterns, colors, and designs that are trending in the
+                    fashion world. These insights allow online retailers to stay ahead of the curve, offering customers
+                    the latest styles and ensuring they remain fashion-forward with every purchase.</p>
+            </div>
+        </div>
+
+        <div id="page4" class="page">
+            <h2>Virtual Try-On Technology</h2>
+            <div class="box">
+                <img src="/images/AI-in-Fashion-Industry.jpg" alt="AI-in-Fashion-Industry">
+                <p>Virtual try-on technology powered by AI enables shoppers to visualize how clothes will look on their
+                    bodies before purchasing. This reduces the guesswork and enhances buyer confidence, leading to fewer
+                    returns and a more satisfying shopping experience.</p>
+            </div>
+        </div>
+
+        <div id="page5" class="page">
+            <h2>Natural Language Processing (NLP) in Fashion Search</h2>
+            <div class="box">
+                <img src="/images/nlp-fashion-search.jpg" alt="NLP Fashion Search">
+                <p>AI systems equipped with NLP allow users to search for outfits using natural, conversational
+                    language. For instance, typing "show me summer dresses with floral prints" will return precise,
+                    relevant results, making it easier for shoppers to find exactly what they're looking for.</p>
+            </div>
+        </div>
+
+        <div id="page6" class="page">
+            <h2>The Future of AI in Fashion Retail</h2>
+            <div class="box">
+                <img src="/images/future-ai-fashion.jpg" alt="Future of AI in Fashion">
+                <p>The future of AI-powered fashion recommendations is bright, with innovations like predictive
+                    analytics, real-time trend adaptation, and even AI-driven virtual fashion stylists on the horizon.
+                    As technology advances, the line between in-store and online shopping will continue to blur,
+                    creating a more cohesive, enjoyable shopping experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button id="prevButton" onclick="changePage(-1)">Previous</button>
+        <button id="nextButton" onclick="changePage(1)">Next</button>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 6;
+
+        function showPage(pageNumber) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).style.display = 'none';
+            }
+            document.getElementById(`page${pageNumber}`).style.display = 'block';
+        }
+
+        function changePage(step) {
+            currentPage += step;
+            if (currentPage < 1) {
+                currentPage = totalPages;
+            } else if (currentPage > totalPages) {
+                currentPage = 1;
+            }
+            showPage(currentPage);
+        }
+
+        // Show the first page initially
+        showPage(currentPage);
+    </script>
+</body>
+
+</html>
